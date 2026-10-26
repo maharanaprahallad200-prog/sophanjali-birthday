@@ -1,232 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Happy Birthday Sophanjali ❤️</title>
-
-    <style>
-        * {
-            box-sizing: border-box;
-            scroll-behavior: smooth;
-        }
-
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: #fff0f5;
-            color: #6b2145;
-            text-align: center;
-        }
-
-        header {
-            background: linear-gradient(135deg, #ff8fab, #ffc2d1);
-            padding: 65px 20px;
-        }
-
-        h1 {
-            font-size: 40px;
-            margin-bottom: 15px;
-        }
-
-        h2 {
-            color: #c2185b;
-        }
-
-        p {
-            line-height: 1.8;
-        }
-
-        button {
-            background: #e91e63;
-            color: white;
-            border: none;
-            border-radius: 25px;
-            padding: 13px 25px;
-            font-size: 16px;
-            cursor: pointer;
-            margin: 10px;
-        }
-
-        button:hover {
-            background: #ad1457;
-        }
-
-        section {
-            padding: 40px 20px;
-        }
-
-        .card {
-            background: white;
-            max-width: 700px;
-            margin: 20px auto;
-            padding: 25px;
-            border-radius: 20px;
-            box-shadow: 0 5px 20px #e7a9bd;
-        }
-
-        .gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 18px;
-            max-width: 1000px;
-            margin: 25px auto;
-        }
-
-        .gallery img {
-            width: 100%;
-            height: 300px;
-            object-fit: cover;
-            border-radius: 18px;
-            box-shadow: 0 4px 12px #e7a9bd;
-        }
-
-        .caption {
-            font-size: 17px;
-            font-weight: bold;
-        }
-
-        .heart {
-            font-size: 45px;
-            animation: heartbeat 1.2s infinite;
-        }
-
-        @keyframes heartbeat {
-            0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.2); }
-        }
-
-        footer {
-            background: #ff8fab;
-            padding: 25px;
-            color: white;
-        }
-    </style>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Sophanjali 💖 | November 1</title><link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-<header>
-    <div class="heart">❤️</div>
+<div class="intro-screen" id="introScreen">
+  <div class="night-sky" aria-hidden="true">
+    <span class="star star1">✦</span><span class="star star2">✧</span>
+    <span class="star star3">✦</span><span class="star star4">✧</span>
+    <span class="star star5">✦</span><span class="star star6">✧</span>
+  </div>
+  <div class="intro-content">
+    <div class="intro-moon">☾</div>
+    <div class="glow-heart">♡</div>
+    <p class="intro-small">A little surprise is waiting under the stars</p>
+    <h1 class="intro-name">Sophanjali</h1>
+    <p class="intro-date">November 1 · Your special day 🎂</p>
+    <div class="intro-heart-row" aria-hidden="true">♡　♥　♡</div>
+    <button class="button intro-button" id="enterSurprise">Someone has a surprise for you… 💌</button>
+    <p class="intro-note">Turn your sound on for a soft, romantic melody 🎶</p>
+  </div>
+</div>
+<button class="music-toggle" id="musicToggle" aria-label="Toggle Sun Saawariya music" title="Play or stop Sun Saawariya">♫ Sun Saawariya: Off</button>
+<div class="song-player" id="songPlayer" aria-label="Sun Saawariya music player" hidden>
+  <div class="song-player-title">♫ sun saawariya · Your music file 💗</div>
+  <audio id="birthdaySong" controls preload="auto">
+    <source src="./sun-saawariya.mp3" type="audio/mpeg">
+    Your browser does not support audio playback.
+  </audio>
+</div>
 
-    <h1>Happy Birthday, Sophanjali! 🎂</h1>
-
-    <p>
-        Today is all about you and the happiness you bring into my life.
-    </p>
-
-    <button onclick="showSurprise()">
-        Open Your Surprise 💌
-    </button>
-</header>
-
-<section id="surprise" style="display:none;">
-
-    <h2>A Letter Just for You 💌</h2>
-
-    <div class="card">
-        <p>My Dearest Sophanjali, ❤️</p>
-
-        <p>
-            Happy Birthday to someone who makes my world more beautiful.
-            Your smile is special to me, and every memory with you means
-            more than words can explain.
-        </p>
-
-        <p>
-            On your special day, I wish you endless happiness, success,
-            beautiful memories, and all the love your heart can hold.
-        </p>
-
-        <p>
-            No matter how many birthdays come and go, I hope you always
-            remember how special you are.
-        </p>
-
-        <p>With lots of love,</p>
-        <h3>Yours, Prahallad ❤️</h3>
-    </div>
-
+<div class="floating-hearts" aria-hidden="true"></div>
+<main>
+<section class="hero" id="home">
+<div class="eyebrow">✨ A little universe made just for you ✨</div><div class="stars">✦ ⋆ ✧ ✦ ⋆</div>
+<div class="envelope" id="envelope" role="button" tabindex="0" aria-label="Open birthday surprise"><div class="envelope-letter">💌</div><div class="envelope-flap"></div></div>
+<p class="tap-hint">Sophanjali, tap the envelope to open your surprise 💗</p>
+<div class="hero-copy hidden" id="heroCopy"><p class="script">To my favourite person,</p><h1>Happy Birthday, <span>Sophanjali</span>! 🎂</h1>
+<p class="subtitle">A tiny corner of the internet, made with love by Prahallad — just to remind you how special you are. 🌷</p>
+<a class="button" href="#letter">Open your birthday letter 💌</a></div>
+<div class="scroll-note hidden" id="scrollNote">There's more love waiting below ↓</div>
 </section>
-
-<section>
-    <h2>Our Special Girl 📸</h2>
-
-    <p>Some beautiful moments that deserve to be remembered forever.</p>
-
-    <div class="gallery">
-
-        <div>
-            <img src="images/sophanjali1.jpg"
-                 alt="Sophanjali photo 1">
-            <p class="caption">My favourite smile ❤️</p>
-        </div>
-
-        <div>
-            <img src="images/sophanjali2.jpg"
-                 alt="Sophanjali photo 2">
-            <p class="caption">You are so special 💗</p>
-        </div>
-
-        <div>
-            <img src="images/sophanjali3.jpg"
-                 alt="Sophanjali photo 3">
-            <p class="caption">A beautiful memory 🌸</p>
-        </div>
-
-        <div>
-            <img src="images/sophanjali4.jpg"
-                 alt="Sophanjali photo 4">
-            <p class="caption">Always precious to me 💖</p>
-        </div>
-
-    </div>
-</section>
-
-<section>
-    <h2>Reasons You Are Special 🌷</h2>
-
-    <div class="card">
-        <p>💗 Your beautiful smile</p>
-        <p>🌸 Your unique personality</p>
-        <p>✨ The happiness you bring</p>
-        <p>❤️ The memories we share</p>
-        <p>🎀 Simply being you!</p>
-    </div>
-</section>
-
-<section>
-    <h2>One Last Message 💖</h2>
-
-    <div class="card">
-        <p>
-            If I could give you one thing in life, I would give you
-            the ability to see yourself through my eyes.
-        </p>
-
-        <p>
-            Then you would understand just how special you are.
-        </p>
-
-        <div class="heart">❤️</div>
-        <h3>Happy Birthday, My Favourite Person!</h3>
-    </div>
-</section>
-
-<footer>
-    Made with ❤️ by Prahallad
-    <p>For Sophanjali, with love. 🌹</p>
-</footer>
-
-<script>
-    function showSurprise() {
-        const surprise = document.getElementById("surprise");
-
-        surprise.style.display = "block";
-        surprise.scrollIntoView({ behavior: "smooth" });
-    }
-</script>
-
-</body>
-</html>
+<section class="letter section" id="letter"><div class="section-tag">A message from Prahallad's heart</div><h2>For you, Sophanjali 💌</h2>
+<div class="paper"><p>My dear Sophanjali,</p><p>Happy Birthday! 💖 I hope your day is filled with laughter, little surprises, warm hugs, and all the things that make you smile.</p>
+<p>You deserve happiness that feels peaceful, dreams that come true one by one, and people who remind you how wonderful you are. Keep being your lovely self, keep shining in your own way, and never forget that your happiness matters.</p>
+<p>I made this little website especially for you. It may be made of code, colours, and animations, but every part is here to send one simple message: you are special, and I hope this new year of your life brings you beautiful things. 🌸</p>
+<p class="signature">With lots of love,<br>Prahallad ❤️</p></div></section>
+<section class="reasons section"><div class="section-tag">Little things, big feelings</div><h2>A few reminders for you, Sophanjali 🌷</h2>
+<div class="cards"><article class="love-card"><div class="icon">🌟</div><h3>You are one of a kind</h3><p>There is only one Sophanjali, and that makes you wonderfully unique.</p></article>
+<article class="love-card"><div class="icon">🌈</div><h3>You deserve happiness</h3><p>May this year bring kind people, brave dreams, and beautiful beginnings.</p></article>
+<article class="love-card"><div class="icon">🫶</div><h3>Keep shining</h3><p>Never forget to celebrate your little wins and be proud of how far you've come.</p></article></div></section>
+<section class="gallery section" id="gallery"><div class="section-tag">Your cutest memories</div><h2>Sophanjali's little gallery 📸</h2>
+<p class="section-intro">Four little pictures, countless beautiful feelings. 💗</p>
+<div class="photo-grid">
+  <article class="photo-placeholder"><img src="./images/sophanjali1.jpg" alt="Sophanjali photo 1"><strong>My favourite smile ❤️</strong><small>A smile that brightens my day</small></article>
+  <article class="photo-placeholder"><img src="./images/sophanjali2.jpg" alt="Sophanjali photo 2"><strong>You are special 🌸</strong><small>A beautiful memory to treasure</small></article>
+  <article class="photo-placeholder"><img src="./images/sophanjali3.jpg" alt="Sophanjali photo 3"><strong>My sweetest memory 💕</strong><small>A little moment worth keeping</small></article>
+  <article class="photo-placeholder"><img src="./images/sophanjali4.jpg" alt="Sophanjali photo 4"><strong>Always precious 💖</strong><small>One more reason to smile</small></article>
+</div></section>
+<section class="memories section"><div class="section-tag">A tiny timeline</div><h2>Little moments, lovely memories ✨</h2><div class="timeline">
+<div class="memory"><span>💗</span><div><h3>The little things</h3><p>The conversations, laughs, and small moments that make a day brighter.</p></div></div>
+<div class="memory"><span>🌷</span><div><h3>The things to look forward to</h3><p>More smiles, new memories, and many reasons to celebrate you.</p></div></div>
+<div class="memory"><span>🎂</span><div><h3>Today is your day</h3><p>Make a wish, enjoy every moment, and let yourself feel special.</p></div></div></div></section>
+<section class="wish section"><div class="wish-box"><div class="big-heart">💖</div><h2>Make a birthday wish, Sophanjali!</h2>
+<p>Close your eyes for a moment, think of something beautiful, and tap the button.</p><button class="button" id="wishButton">My wish is made ✨</button><p id="wishMessage" class="wish-message" aria-live="polite"></p></div></section>
+<section class="secret section"><div class="secret-card"><div class="section-tag">One last little surprise</div><h2>A secret message for you 💝</h2><p>Some surprises are best opened at the end…</p>
+<button class="button" id="secretButton">Open my secret message 💌</button><div id="secretMessage" class="secret-message hidden"><p>Sophanjali, I hope this little surprise makes you smile today. You deserve kindness, joy, and beautiful moments—not just on your birthday, but all year long. Keep being you. 🌹</p><p class="signature">Always wishing you happiness,<br>Prahallad ❤️</p></div></div></section>
+<footer><p>Made with ❤️ by Prahallad, just for Sophanjali.</p><p class="small">P.S. May your smile have a thousand reasons today. 😊</p></footer>
+</main><script src="script.js"></script></body></html>
